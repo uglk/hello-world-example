@@ -1,7 +1,7 @@
 pipeline {
     agent {
         kubernetes{
-            yamlFile 'application/agents.yaml'
+            yamlFile 'agents.yaml'
         }
     }
     stages {
