@@ -15,7 +15,7 @@ pipeline {
         stage("SCM Checkout"){
             steps{
                 container("git"){
-                    git branch: 'main', url: 'https://github.com/uglk/hello-world-example.git'
+                    git branch: 'main', url: 'https://github.com/uglk/hello-world-example.git
                 }
             }
         }
