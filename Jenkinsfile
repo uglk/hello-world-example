@@ -5,10 +5,10 @@ pipeline {
         }
     }
     stages {
-        stage("Git Version") {
+        stage("Linting") {
             steps {
-                container("git"){
-                    sh 'git --version'
+                container("maven"){
+                    sh 'mvn clean site'
                 }
             }
         }
