@@ -5,10 +5,17 @@ pipeline {
         }
     }
     stages {
-        stage("Linting") {
-            steps {
-                container("maven"){
-                    sh 'mvn clean site'
+        // stage("Linting") {
+        //     steps {
+        //         container("maven"){
+        //             sh 'mvn clean site'
+        //         }
+        //     }
+        // }
+        stage("SCM Checkout"){
+            steps{
+                container("git"){
+                    git branch: 'main', url: 'https://github.com/uglk/hello-world-example.git'
                 }
             }
         }
