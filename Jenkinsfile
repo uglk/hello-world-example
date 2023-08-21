@@ -19,10 +19,10 @@ pipeline {
                 }
             }
         }
-        stage("Maven Version") {
+        stage("Maven Build") {
             steps {
                 container("maven"){
-                    sh 'mvn -version'
+                    sh 'mvn clean package'
                 }
             }
         }
