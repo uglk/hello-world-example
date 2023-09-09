@@ -14,7 +14,7 @@ pipeline {
         }
         stage("maven version"){
             steps{
-                container("git"){
+                container("maven"){
                 sh 'mvn --version'
             }
             }
