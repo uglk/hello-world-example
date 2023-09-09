@@ -12,5 +12,12 @@ pipeline {
             }
             }
         }
+        stage("maven version"){
+            steps{
+                container("git"){
+                sh 'mvn --version'
+            }
+            }
+        }
     }
 }
