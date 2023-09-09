@@ -21,10 +21,11 @@ pipeline {
         //     }
         // }
         stage("git version"){
-            container("git"){
-                 sh 'git --version'
+            steps{
+                container("git"){
+                sh 'git --version'
             }
-           
+            }
         }
     }
 }
